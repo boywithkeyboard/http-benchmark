@@ -1,0 +1,32 @@
+name: bench
+
+on:
+  schedule:
+    - cron: 0 12 * * *
+  workflow_dispatch:
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: 1.22
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install bombardier
+        run: go install github.com/codesenberg/bombardier@latest
+
+      - name: Install Dependencies
+        uses: npm ci
+
+      - name: Run Benchmark
+        run: npm run bench
