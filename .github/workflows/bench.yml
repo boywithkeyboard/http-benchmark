@@ -12,6 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
@@ -29,4 +34,4 @@ jobs:
         uses: npm ci
 
       - name: Run Benchmark
-        run: npm run bench
+        run: deno run -A bench.js
