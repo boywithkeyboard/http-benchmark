@@ -1,6 +1,6 @@
 ## http-benchmark
 
-This repository compares the performance some of the most popular web frameworks against `node:http` using [bombardier](https://github.com/codesenberg/bombardier).
+This repository compares the performance of some of the most popular web frameworks against `node:http` using [bombardier](https://github.com/codesenberg/bombardier).
 
 ```bash
 bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
@@ -10,14 +10,14 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
 | RELATIVE | FRAMEWORK | AVG | STDDEV | MAX |
 | :--- | :--- | :--- | :--- | :--- |
-| **100%** | [uWS](#uws) | `107492` | `11141` | `175140` |
-| **85%** | [Hyper Express](#hyper-express) | `91211` | `7421` | `99803` |
-| **59%** | [Node (Default)](#node-default) | `62903` | `12512` | `72138` |
-| **53%** | [Fastify](#fastify) | `56970` | `13685` | `69240` |
-| **51%** | [Hono](#hono) | `54306` | `12904` | `65046` |
-| **44%** | [Koa](#koa) | `47316` | `12043` | `57116` |
-| **18%** | [Carbon](#carbon) | `19084` | `4027` | `23216` |
-| **11%** | [Express](#express) | `11911` | `1899` | `14118` |
+| **100%** | [uWS](#uws) | `107687` | `8006` | `113953` |
+| **93%** | [Hyper Express](#hyper-express) | `100586` | `4911` | `104974` |
+| **62%** | [Node (Default)](#node-default) | `67288` | `13150` | `76595` |
+| **58%** | [Fastify](#fastify) | `62760` | `15466` | `71749` |
+| **56%** | [Hono](#hono) | `60098` | `13422` | `71344` |
+| **49%** | [Koa](#koa) | `52683` | `13272` | `118941` |
+| **18%** | [Carbon](#carbon) | `19758` | `3771` | `22675` |
+| **12%** | [Express](#express) | `12674` | `1435` | `14195` |
 
 
 ### In Detail
@@ -42,12 +42,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     20585.38    3787.76   27708.43
-    Latency        2.43ms   668.10us    53.72ms
+    Reqs/sec     20166.13    3525.83   25406.01
+    Latency        2.48ms   639.47us    59.25ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:     4.67MB/s
+    Throughput:     4.57MB/s
   ```
 
 - #### Express
@@ -66,12 +66,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     12383.06    1700.01   14213.37
-    Latency        4.03ms     2.18ms    80.92ms
+    Reqs/sec     12561.52    1497.32   14177.20
+    Latency        3.98ms     1.64ms    74.46ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:     3.54MB/s
+    Throughput:     3.59MB/s
   ```
 
 - #### Fastify
@@ -94,12 +94,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     61214.11   14430.73   70408.97
-    Latency      815.55us   248.67us    29.14ms
+    Reqs/sec     61011.72   16159.97   71991.28
+    Latency      818.07us   256.25us    31.04ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:    13.87MB/s
+    Throughput:    13.84MB/s
   ```
 
 - #### Hono
@@ -117,12 +117,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     56905.18   12716.76   66077.85
-    Latency        0.88ms   300.98us    34.46ms
+    Reqs/sec     59992.43   13372.95   67617.97
+    Latency      832.51us   226.35us    33.98ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:    12.85MB/s
+    Throughput:    13.54MB/s
   ```
 
 - #### Hyper Express
@@ -141,12 +141,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     98244.31    9069.57  105038.67
-    Latency      507.09us    31.41us     2.33ms
+    Reqs/sec    102161.47    5219.03  105112.37
+    Latency      487.45us    26.01us     2.31ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:    13.97MB/s
+    Throughput:    14.51MB/s
   ```
 
 - #### Koa
@@ -165,12 +165,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     50316.33   10929.36   57505.94
-    Latency        0.99ms   359.30us    39.87ms
+    Reqs/sec     52969.82   11767.15   60281.02
+    Latency        0.94ms   318.85us    38.78ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:    11.36MB/s
+    Throughput:    11.96MB/s
   ```
 
 - #### Node (Default)
@@ -193,12 +193,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec     66931.92   13166.14   92664.09
-    Latency      749.03us   209.79us    29.17ms
+    Reqs/sec     64569.21   12788.27   72504.63
+    Latency      773.27us   214.70us    29.83ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:    15.24MB/s
+    Throughput:    14.76MB/s
   ```
 
 - #### uWS
@@ -217,12 +217,12 @@ bombardier -n 100000 -c 50 -p r http://127.0.0.1:3000
 
   ```
   Statistics        Avg      Stdev        Max
-    Reqs/sec    111057.80    4258.88  114279.71
-    Latency      448.66us    23.26us     1.78ms
+    Reqs/sec    106349.90    5205.44  112779.35
+    Latency      468.51us    24.07us     2.26ms
     HTTP codes:
       1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
       others - 0
-    Throughput:    17.58MB/s
+    Throughput:    16.83MB/s
   ```
 
 
