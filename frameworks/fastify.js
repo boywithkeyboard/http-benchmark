@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
   res.send('Hello World')
 })
 
-app.listen({ port: 3000 }, (err, address) => {
+app.listen({ port: 3000 }, (err) => {
   if (err) throw err
 })
