@@ -35,3 +35,10 @@ jobs:
 
       - name: Run Benchmark
         run: deno run -A bench.js
+
+      - name: Commit Changes
+        run: |
+          git config --global user.name "GitHub"
+          git config --global user.email "noreply@github.com"
+          git commit -am "refactor: update benchmark"
+          git push
