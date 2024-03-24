@@ -31,7 +31,7 @@ jobs:
         run: go install github.com/codesenberg/bombardier@latest
 
       - name: Install Dependencies
-        uses: npm ci
+        run: npm ci
 
       - name: Run Benchmark
         run: deno run -A bench.js
