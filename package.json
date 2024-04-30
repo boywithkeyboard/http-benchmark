@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@hono/node-server": "^1.11.1",
-    "@sinclair/carbon": "^0.8.3",
+    "@sinclair/carbon": "^0.8.4",
     "express": "^4.19.2",
     "fastify": "^4.26.2",
     "hono": "^4.2.9",
