@@ -6,7 +6,7 @@
     "@sinclair/carbon": "^0.8.4",
     "express": "^4.19.2",
     "fastify": "^4.26.2",
-    "hono": "^4.2.9",
+    "hono": "^4.3.4",
     "hyper-express": "^6.15.2",
     "koa": "^2.15.3",
     "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.43.0"
