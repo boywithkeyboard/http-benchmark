@@ -9,7 +9,7 @@
     "hono": "^4.2.9",
     "hyper-express": "^6.15.2",
     "koa": "^2.15.3",
-    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.43.0"
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.44.0"
   },
   "type": "module"
 }
