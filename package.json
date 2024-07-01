@@ -5,7 +5,7 @@
     "@hono/node-server": "^1.11.1",
     "@sinclair/carbon": "^0.8.4",
     "express": "^4.19.2",
-    "fastify": "^4.26.2",
+    "fastify": "^4.28.1",
     "hono": "^4.2.9",
     "hyper-express": "^6.15.2",
     "koa": "^2.15.3",
